@@ -38,6 +38,14 @@ HoFs are functions that take a function as a parameter, and optionally some othe
 
 Applying the idea of HOFs to components results in higher-order components (HOCs).
 
+An HOC looks like this:
+
+```javascript
+const HoC = Component => EnhancedComponent
+```
+
+In the React community, it’s common to use the with prefix for HOCs.
+
 HOCs are functions that take a component as input and return an enhanced component as output.
 
 HOCs typically spread the props they receive on the component because they aim to be transparent and only add new behavior.
