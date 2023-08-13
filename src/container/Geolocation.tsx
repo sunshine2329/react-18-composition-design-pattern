@@ -7,7 +7,7 @@ type Props = {
 
 const Geolocation: FC<Props> = ({ latitude, longitude }) => (
   <div>
-    <h1>Geolocation:</h1>
+    <h3>Geolocation:</h3>
     <div>Latitude: {latitude}</div>
     <div>Longitude: {longitude}</div>
   </div>

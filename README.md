@@ -14,14 +14,14 @@ So, we should think carefully when we decide that a component has to be refactor
 
 Deciding what to put in the container and what goes into the presentation is not always straightforward; the following points should help you make that decision:
 
-The following are the characteristics of container components:
+**The following are the characteristics of container components:**
 
 - They are more concerned with behavior.
 - They render their presentational components.
 - They make API calls and manipulate data.
 - They define event handlers.
 
-The following are the characteristics of presentational components:
+**The following are the characteristics of presentational components:**
 
 - They are more concerned with the visual representation.
 - They render the HTML markup (or other components).
@@ -61,3 +61,16 @@ The FunctionAsChild pattern is gaining consensus within the React community. It 
 The main concept is that instead of passing a child as a component, we define a function that can receive parameters from the parent.
 
 As you can see, FunctionAsChild is a component with a children property defined as a function. Instead of being used as a JSX expression, it gets called.
+
+**Advantages of this approach:**
+
+- The primary advantage is the ability to encapsulate components, delivering variables dynamically, as opposed to utilizing static properties, which is a common practice with HOCs. An excellent illustration of this is a Fetch component, designed to retrieve data from a specific API endpoint and subsequently return it to its child function:
+
+```javascript
+<Fetch url="...">{data => <List data={data} />}</Fetch>
+```
+
+- Secondly, composing components with this approach does not force children to use predefined prop names. Since the function receives variables, developers who use the component can decide on their names. This flexibility makes the Function as Child solution more versatile.
+- Lastly, the wrapper is highly reusable because it does not make any assumptions about the children it receives—it just expects a function. Due to this, the same FunctionAsChild component can be used in different parts of the application to serve various children components.
+
+By adopting the Function as Child pattern, you can create more flexible, versatile, and reusable components in your React applications.

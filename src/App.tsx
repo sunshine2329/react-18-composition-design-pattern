@@ -1,5 +1,6 @@
 import './App.css'
 import GeolocationContainer from './container'
+import FunctionAsChild from './functionAsChild'
 import MyComponent from './hocs'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <GeolocationContainer />
       <MyComponent />
+      <FunctionAsChild />
     </div>
   )
 }

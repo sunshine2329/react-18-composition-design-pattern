@@ -20,7 +20,12 @@ const GeolocationContainer = () => {
     setLongitude(longitude)
   }
 
-  return <Geolocation latitude={latitude} longitude={longitude} />
+  return (
+    <div>
+      <h1>Container Pattern:</h1>
+      <Geolocation latitude={latitude} longitude={longitude} />
+    </div>
+  )
 }
 
 export default GeolocationContainer
