@@ -1,4 +1,6 @@
-# React-18 Composition Design Pattern
+# React-18-composition-design-pattern
+
+how to make components communicate with each other effectively, which is a crucial part of building complex React applications using small, testable, and maintainable components.
 
 ## react-container-presentational-pattern
 
