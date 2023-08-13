@@ -54,7 +54,7 @@ HOCs typically spread the props they receive on the component because they aim t
 
 By using HOCs, we avoid polluting any state and don’t require the component to implement any function. This means the component and HOC are not coupled, and both can be reused throughout the application.
 
-Using props instead of state allows us to create a “dumb” component that can be used in our style guide, ignoring complex logic and just passing down the props.
+Using props instead of state allows us to create a “dumb” component that can be used in style guide, ignoring complex logic and just passing down the props.
 
 ## FunctionAsChild
 
