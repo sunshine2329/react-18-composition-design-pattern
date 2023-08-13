@@ -1,10 +1,12 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "react"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:prettier/recommended"
   ],
   "settings": {
@@ -41,12 +43,7 @@
     ],
     "no-param-reassign": "off",
     "no-underscore-dangle": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".tsx"]
-      }
-    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "import/no-unresolved": "off",
     "consistent-return": "off",
     "jsx-a11y/anchor-is-valid": "off",
